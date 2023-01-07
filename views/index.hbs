@@ -1,0 +1,22 @@
+<div class="container">
+  <form action="/" method="post" id="form">
+    <div class="header">
+      <div class="text">url<span>Reloader&#9851</span></div>
+    </div>
+    <div class="form-row">
+      <label for="url">Enter site url</label>
+      <input type="text" name="url" id="url" value="{{#if reqUrl}}{{reqUrl}}{{else}}https://{{/if}}">
+      {{#if urlError}}
+        <p>{{urlError}}</p>
+      {{/if}}
+    </div>
+    <div class="form-row">
+      <label for="rate">Enter refresh rate</label>
+      <input type="text" name="rate" id="rate" value="{{#if reqRate}}{{reqRate}}{{else}}20{{/if}}">
+      {{#if rateError}}
+        <p>{{rateError}}</p>
+      {{/if}}
+    </div>
+    <button>Start</button>
+  </form>
+</div>
